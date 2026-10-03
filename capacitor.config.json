@@ -1,0 +1,36 @@
+{
+  "appId": "com.khotwatak.app",
+  "appName": "خطوتك ربح",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  },
+  "android": {
+    "buildOptions": {
+      "keystorePath": "~/release-key.keystore",
+      "keystorePassword": "",
+      "keystoreAlias": "key0",
+      "keystoreAliasPassword": ""
+    }
+  },
+  "ios": {
+    "preferredLanguage": "ar"
+  },
+  "plugins": {
+    "Health": {
+      "permissions": {
+        "android": [
+          "android.permission.ACTIVITY_RECOGNITION",
+          "android.permission.ACTIVITY_RECOGNITION_INDOOR",
+          "android.permission.READ_LOGS"
+        ]
+      }
+    },
+    "LocalNotifications": {},
+    "App": {
+      "allowUIWebViewGesture": true
+    }
+  }
+}
