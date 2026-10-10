@@ -1,0 +1,8 @@
+/* ===== خطوتك ربح v2 · الشارات ===== */
+.bdg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.bdg .card{text-align:center;padding:14px 6px}
+.bdg span{font-size:32px;display:block;filter:grayscale(1);opacity:.35}
+.bdg .got span{filter:none;opacity:1}
+.bdg b{display:block;font-size:13px;margin-top:6px}
+.bdg small{font-size:11px;color:var(--mut)}
+.bdg .got{border-color:rgba(251,191,36,.5)}

@@ -1,34 +1,16 @@
 {
-  "name": "khotwatak-real",
-  "version": "1.0.0",
-  "description": "خطوتك ربح - تطبيق عداد الخطوات الحقيقي 100% مع Health API الأصلي",
-  "author": "Your Name",
-  "type": "module",
+  "name": "khotwatak",
+  "version": "2.0.0",
+  "private": true,
+  "description": "خطوتك ربح v2 — عداد خطوات حقيقي بحسّاس الهاتف، بيعدّ والشاشة مطفأة",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "type-check": "tsc --noEmit",
-    "capacitor:add": "capacitor add android",
-    "capacitor:copy": "capacitor copy",
-    "capacitor:build": "npm run build && capacitor copy && capacitor build android",
-    "capacitor:run": "capacitor run android",
-    "capacitor:open": "capacitor open android",
-    "capacitor:sync": "capacitor sync"
+    "sync": "cap sync android"
   },
   "dependencies": {
-    "@capacitor/core": "^6.0.0",
-    "@capacitor/app": "^6.0.0",
-    "@capacitor/health": "^5.0.0",
-    "@capacitor/local-notifications": "^6.0.0"
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/core": "^6.2.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.0",
-    "typescript": "^5.3.0",
-    "vite": "^5.0.0"
-  },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0"
+    "@capacitor/cli": "^6.2.0"
   }
 }

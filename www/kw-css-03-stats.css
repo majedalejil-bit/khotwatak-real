@@ -1,0 +1,13 @@
+/* ===== خطوتك ربح v2 · الإحصائيات: أعمدة الأسبوع والشهر ===== */
+.bars{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;align-items:end;height:170px;padding-top:18px}
+.bar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:6px}
+.bar i{display:block;width:100%;max-width:30px;border-radius:8px 8px 4px 4px;background:var(--card2);min-height:4px;position:relative}
+.bar i.hit{background:linear-gradient(180deg,var(--pri2),var(--pri))}
+.bar i.today{outline:2px solid var(--gold);outline-offset:2px}
+.bar small{font-size:11px;color:var(--mut)}
+.bar em{font-style:normal;font-size:10px;color:var(--mut)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpis .card b{display:block;font-size:22px}.kpis .card small{color:var(--mut);font-size:12px}
+.seg{display:flex;gap:6px;background:var(--card2);padding:4px;border-radius:12px}
+.seg button{flex:1;padding:7px;border-radius:9px;font-size:13px;color:var(--mut)}
+.seg button.on{background:var(--card);color:var(--txt)}

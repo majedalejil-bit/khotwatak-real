@@ -1,0 +1,46 @@
+# خطوتك ربح v2 · بناء ملف APK تلقائياً مع كل رفع للكود
+name: build-apk
+on:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: تثبيت Capacitor
+        run: npm install --no-audit --no-fund
+      - name: مشروع أندرويد + الكود الأصلي
+        run: |
+          rm -rf android
+          npx cap add android
+          node scripts/patch-android.mjs
+          npx cap sync android
+      - name: بناء APK
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon --stacktrace
+          mkdir -p ../out
+          cp app/build/outputs/apk/release/app-release.apk ../out/khotwatak-v2.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: khotwatak-v2-apk
+          path: out/khotwatak-v2.apk
+      - name: نشر رابط تحميل مباشر (Releases)
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v2.0
+          name: خطوتك ربح v2.0
+          files: out/khotwatak-v2.apk
+          make_latest: true
