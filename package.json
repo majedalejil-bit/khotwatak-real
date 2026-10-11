@@ -1,8 +1,8 @@
 {
-  "name": "khotwatak",
-  "version": "2.0.0",
+  "name": "rivo-app",
+  "version": "9.0.0",
   "private": true,
-  "description": "خطوتك ربح v2 — عداد خطوات حقيقي بحسّاس الهاتف، بيعدّ والشاشة مطفأة",
+  "description": "RIVO v9 للأندرويد — ألعاب ومهام + امشِ واربح بعدّاد خطوات حقيقي",
   "scripts": {
     "sync": "cap sync android"
   },

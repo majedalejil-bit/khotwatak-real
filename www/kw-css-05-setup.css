@@ -1,9 +1,0 @@
-/* ===== خطوتك ربح v2 · خطوات التشغيل الأولى (الصلاحيات والبطارية) ===== */
-.setup h3{font-size:20px;margin-bottom:6px}
-.setup .st{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
-.setup .st:last-of-type{border:0}
-.setup .st>span{font-size:22px;width:30px;text-align:center}
-.setup .st div{flex:1}.setup .st p{font-size:13px;color:var(--mut);margin-top:2px}
-.setup .ok{color:var(--pri2);font-weight:700;font-size:13px;white-space:nowrap}
-.setup .btn{padding:9px 14px;font-size:14px}
-.setup .tip{font-size:13px;background:var(--card2);border-radius:12px;padding:10px 12px;margin-top:10px;line-height:1.6}

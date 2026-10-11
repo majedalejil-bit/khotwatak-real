@@ -1,6 +1,12 @@
 {
   "appId": "com.khotwatak.app",
-  "appName": "خطوتك ربح",
+  "appName": "RIVO",
   "webDir": "www",
-  "android": { "allowMixedContent": false }
+  "backgroundColor": "#0c0a1d",
+  "server": {
+    "url": "https://rivo-majed.netlify.app",
+    "errorPath": "index.html",
+    "cleartext": false
+  },
+  "android": { "allowMixedContent": false, "backgroundColor": "#0c0a1d" }
 }

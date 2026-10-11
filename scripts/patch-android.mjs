@@ -1,4 +1,4 @@
-// خطوتك ربح v2 · بيضيف الكود الأصلي (عدّاد الخطوات) لمشروع أندرويد اللي بيعمله Capacitor
+// RIVO v9 (من خطوتك ربح) · بيضيف الكود الأصلي (عدّاد الخطوات) لمشروع أندرويد اللي بيعمله Capacitor
 // بيشتغل تلقائياً على GitHub Actions بعد «npx cap add android»
 import fs from 'node:fs';
 import path from 'node:path';
@@ -65,7 +65,7 @@ fs.writeFileSync(mf, m);
 // 4) رقم النسخة + التوقيع الثابت (حتى التحديثات تنزل فوق القديم بدون حذف)
 const bg = path.join(app, 'build.gradle');
 let g = fs.readFileSync(bg, 'utf8');
-g = g.replace(/versionCode \d+/, 'versionCode 2').replace(/versionName "[^"]*"/, 'versionName "2.0"');
+g = g.replace(/versionCode \d+/, 'versionCode 10').replace(/versionName "[^"]*"/, 'versionName "9.0"');
 g += `
 android {
     signingConfigs {

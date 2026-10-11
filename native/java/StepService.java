@@ -16,7 +16,7 @@ import android.os.Build;
 import android.os.IBinder;
 import android.os.PowerManager;
 
-/* خطوتك ربح v2 · خدمة بالخلفية: بتضل تعدّ والشاشة مطفأة والتطبيق مسكّر */
+/* RIVO v9 (من خطوتك ربح) · خدمة بالخلفية: بتضل تعدّ والشاشة مطفأة والتطبيق مسكّر */
 public class StepService extends Service implements SensorEventListener {
     static final String CH = "kw_steps";
     static final int NID = 7001;
@@ -126,8 +126,9 @@ public class StepService extends Service implements SensorEventListener {
         Notification.Builder b = Build.VERSION.SDK_INT >= 26 ? new Notification.Builder(this, CH) : new Notification.Builder(this);
         b.setSmallIcon(R.drawable.ic_kw_steps)
          .setContentTitle("👟 " + String.format(java.util.Locale.US, "%,d", today) + " خطوة اليوم")
-         .setContentText(fallback ? "عم نعدّ خطواتك (وضع حسّاس الحركة)" : "عم نعدّ خطواتك حتى والشاشة مطفأة")
+         .setContentText(fallback ? "عم نعدّ خطواتك (وضع حسّاس الحركة)" : "امشِ واربح نقاط RIVO 👣")
          .setContentIntent(pi)
+         .setColor(0xFF6C3BFF)
          .setOngoing(true)
          .setOnlyAlertOnce(true)
          .setShowWhen(false);

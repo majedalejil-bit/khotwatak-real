@@ -3,43 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b1411">
-<title>خطوتك ربح</title>
-<link rel="icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="kw-css-01-base.css">
-<link rel="stylesheet" href="kw-css-02-home.css">
-<link rel="stylesheet" href="kw-css-03-stats.css">
-<link rel="stylesheet" href="kw-css-04-badges.css">
-<link rel="stylesheet" href="kw-css-05-setup.css">
-<link rel="stylesheet" href="kw-css-06-settings.css">
+<meta name="theme-color" content="#0c0a1d">
+<title>RIVO</title>
+<style>
+:root{--bg:#0c0a1d;--fg:#f3f0ff;--muted:#a59fc9;--rivo:#6c3bff;--rivo2:#9d7bff;--sky:#36d6ff;--hot:#ff4f8b}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(60% 40% at 85% 0%,rgba(108,59,255,.35),transparent 70%),radial-gradient(60% 40% at 50% 100%,rgba(255,79,139,.10),transparent 70%)}
+.logo{width:84px;height:84px;border-radius:24px;margin:0 auto 18px;background:conic-gradient(from 210deg,var(--rivo),var(--sky),var(--hot),var(--rivo));box-shadow:0 0 30px rgba(108,59,255,.7);display:grid;place-items:center;font-size:42px;font-weight:800}
+h1{margin:0 0 8px;font-size:22px}
+p{color:var(--muted);margin:0 0 22px}
+button{font:inherit;font-weight:700;color:#fff;border:0;padding:14px 28px;border-radius:14px;background:linear-gradient(135deg,var(--rivo),var(--rivo2));box-shadow:0 8px 24px rgba(108,59,255,.35)}
+</style>
 </head>
 <body>
-<header class="top">
-  <div class="brand"><img src="icons/icon-192.png" alt=""><b>خطوتك ربح</b></div>
-  <span class="live" id="live" hidden><i></i>شغّال</span>
-</header>
-<main>
-  <section class="page" id="pg-home"></section>
-  <section class="page" id="pg-stats" hidden></section>
-  <section class="page" id="pg-badges" hidden></section>
-  <section class="page" id="pg-settings" hidden></section>
-</main>
-<nav class="tabs" aria-label="التنقل">
-  <button type="button" data-go="home" class="on"><span>🏠</span>اليوم</button>
-  <button type="button" data-go="stats"><span>📊</span>إحصائيات</button>
-  <button type="button" data-go="badges"><span>🏅</span>الشارات</button>
-  <button type="button" data-go="settings"><span>⚙️</span>الإعدادات</button>
-</nav>
-<div id="toast" role="status" aria-live="polite"></div>
-<div id="sheet" hidden></div>
-
-<script src="kw-js-01-core.js"></script>
-<script src="kw-js-02-native.js"></script>
-<script src="kw-js-03-home.js"></script>
-<script src="kw-js-04-stats.js"></script>
-<script src="kw-js-05-badges.js"></script>
-<script src="kw-js-06-setup.js"></script>
-<script src="kw-js-07-settings.js"></script>
-<script src="kw-js-08-start.js"></script>
+<div>
+  <div class="logo">R</div>
+  <h1>ما في إنترنت 📡</h1>
+  <p>RIVO بيحتاج إنترنت لتلعب وتربح.<br>خطواتك عم تنعدّ عادي حتى بدون إنترنت 👣</p>
+  <button type="button" onclick="location.href='https://rivo-majed.netlify.app/'">جرّب كمان مرة</button>
+</div>
 </body>
 </html>
