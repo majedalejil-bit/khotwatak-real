@@ -41,6 +41,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v9.0
-          name: RIVO v9.0 · امشِ واربح
+          name: خطوتك ربح v9.0 (مع RIVO)
           files: out/rivo-v9.apk
           make_latest: true
