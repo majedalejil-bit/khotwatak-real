@@ -1,4 +1,4 @@
-# RIVO v9 · بناء ملف APK تلقائياً مع كل رفع للكود
+# خطوتك ربح v2 · بناء ملف APK تلقائياً مع كل رفع للكود
 name: build-apk
 on:
   push:
@@ -31,16 +31,16 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleRelease --no-daemon --stacktrace
           mkdir -p ../out
-          cp app/build/outputs/apk/release/app-release.apk ../out/rivo-v9.apk
+          cp app/build/outputs/apk/release/app-release.apk ../out/khotwatak-v2.apk
       - uses: actions/upload-artifact@v4
         with:
-          name: rivo-v9-apk
-          path: out/rivo-v9.apk
+          name: khotwatak-v2-apk
+          path: out/khotwatak-v2.apk
       - name: نشر رابط تحميل مباشر (Releases)
         if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v9.0
-          name: خطوتك ربح v9.0 (مع RIVO)
-          files: out/rivo-v9.apk
+          tag_name: v2.0
+          name: خطوتك ربح v2.0
+          files: out/khotwatak-v2.apk
           make_latest: true
